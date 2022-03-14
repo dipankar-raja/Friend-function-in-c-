@@ -1,0 +1,21 @@
+#include<iostream.h>
+class example
+{
+ private: int i;
+
+ public:
+    example(int i1)
+    {
+    i=i1;
+    }
+    friend void show(example e1);
+};
+void show(example e1)
+{
+ cout<<e1.i;
+}
+void main()
+{
+ example e2(5);
+ show(e2);
+}
